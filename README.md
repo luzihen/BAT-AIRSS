@@ -9,3 +9,4 @@ savetop.sh -- shell script to save all entries with low energies found by CASTEP
 cif_2_vasp.py -- generating vasp inputs from cif files using pymatgen.
 hopper.py -- bash for high-throughput calculataions for vasp.
 save_entries.py/load_entreis.py --as the name of the file
+cpres -- bash script to copy the low energy structures to a subdirectory for quick inspection.
