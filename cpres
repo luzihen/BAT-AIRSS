@@ -1,0 +1,29 @@
+#!/bin/bash
+
+if [ $# -lt 3 ]; then
+  echo "This script copies the low energy structures of an airss search to a subdirectory."
+  echo "Usage: cpres <subdirectory> <no. structures> <structral combing threshold>"
+  exit 1
+fi
+
+DIR=$1
+rrr=$2
+uuu=$3
+
+if [ -d $DIR ]
+then
+	read -p "the $DIR directory exist, press space to res-files to $DIR..."
+	list=`ca -u $uuu -r -t $2 | awk '{print $1}' `
+	for i in $list
+	do
+	cp $i.res $DIR
+	done
+else
+	echo "creating $DIR directory and copying res-files to $DIR..."
+	mkdir "$DIR"
+	list=`ca -u $uuu -r -t $2 | awk '{print $1}' `
+  	for i in $list
+  	do
+  	echo $i.res
+   	done
+fi
