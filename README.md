@@ -1,5 +1,5 @@
 # BAT-AIRSS
-Tools for battery research with AIRSS
+Tools for battery research with AIRSS. Scripts to build ab intio databases for cathodes prediction.
 
 
 airss_port_pymatgen.py -- python script to import airss results (.res) to pymatgen.  
